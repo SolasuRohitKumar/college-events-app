@@ -1,0 +1,190 @@
+/* General Page Styling */
+body {
+    font-family: 'Georgia', serif;
+    background: #e9e8f4;  /* Light beige background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 500px;
+    background: #a15b62;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border: 1px solid #ddd;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+h1 {
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Search Bar */
+#searchInput {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fafafa;
+    color: #333;
+    transition: 0.3s;
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #888;
+}
+
+#searchInput:focus {
+    border-color: #555;
+    box-shadow: 0 0 5px rgba(85, 85, 85, 0.5);
+}
+
+/* Event Form */
+.event-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.event-form input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    background: #fafafa;
+    color: #333;
+    outline: none;
+}
+
+.event-form input::placeholder {
+    color: #888;
+}
+
+.event-form button {
+    padding: 10px;
+    border: none;
+    background: #6c757d;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.event-form button:hover {
+    background: #5a6268;
+}
+
+/* Event List */
+.event-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Event Cards */
+.event {
+    background: #f9f9f9;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+    opacity: 0;
+    transform: translateY(5px);
+    animation: fadeSlideIn 0.4s ease-in-out forwards;
+}
+
+/* Buttons */
+.event button {
+    background: #dc3545;
+    color: rgb(195, 163, 163);
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s ease-in-out;
+}
+
+.event button:hover {
+    background: #c82333;
+}
+
+/* Clear All Button */
+.clear-all {
+    background: #343a40;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.clear-all:hover {
+    background: #23272b;
+}
+
+/* Animations */
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .event-form {
+        flex-direction: column;
+    }
+
+    .event-form input {
+        width: 100%;
+    }
+
+    .event-form button {
+        width: 100%;
+    }
+}
